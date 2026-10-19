@@ -1,0 +1,22 @@
+[Unit]
+Description=Prometheus Proxmox VE Exporter
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pve-exporter
+Group=pve-exporter
+
+ExecStart=/opt/prometheus-pve-exporter/venv/bin/pve_exporter --config.file=/etc/prometheus/pve.yml
+
+Restart=on-failure
+RestartSec=5s
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
