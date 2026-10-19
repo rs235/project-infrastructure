@@ -28,4 +28,11 @@ linux_users:
     ssh_key: "{{ ssh_key_ansible }}"
     sudo_nopasswd: true
 
+  - name: pve-exporter
+    comment: "prometheus-pve-exporter service account"
+    group: pve-exporter
+    create_home: false
+    system: true
+    shell: /usr/sbin/nologin
+
 pve_exporter_version: 3.10.1
