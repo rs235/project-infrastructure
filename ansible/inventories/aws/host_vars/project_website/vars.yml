@@ -7,7 +7,7 @@ caddy_sites:
     upstream: 127.0.0.1:8080
 
 # Dockerized Service Configuration
-docker_image: "docker.io/rs235/website:latest"
+docker_image: "docker.io/rs235/website:1792481759"
 docker_container: project-website
 docker_ports:
   - "127.0.0.1:8080:8080"
