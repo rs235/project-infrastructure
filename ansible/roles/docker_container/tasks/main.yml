@@ -1,12 +1,13 @@
 ---
-- name: Pull Docker Image
-  community.docker.docker_image_pull:
-    name: "{{ docker_image }}"
+# - name: Pull Docker Image
+#   community.docker.docker_image_pull:
+#     name: "{{ docker_image }}"
 
 - name: Run Docker Image
   community.docker.docker_container:
     name: "{{ docker_container }}"
     image: "{{ docker_image }}"
+    pull: always
     state: started
     restart_policy: unless-stopped
     ports: "{{ docker_ports }}"
