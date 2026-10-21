@@ -18,7 +18,7 @@ flowchart TB
     Linux["Linux hosts"]
     Kubespray["Kubespray"]
     K8s["Kubernetes cluster"]
-    Argo["Argo CD<br/>separate GitOps repository"]
+    Argo["Argo CD<br/>(separate repository)"]
     Apps["Kubernetes workloads"]
 
     GitHub --> Actions
