@@ -4,7 +4,7 @@ Personal hybrid infrastructure automation built with Terraform and Ansible on to
 
 This project focuses on providing reproducible infrastructure, reusable configuration and clear separation between infrastructure provisioning, system configuration and application delivery. It manages resources running on top of already existing home environment with Proxmox VE, TrueNAS, OPNsense, self hosted GitHub Actions runner and physical network devices which lie outside of the scope of this project.
 
-Architecture
+## Architecture
 
 ```mermaid
 flowchart TB
@@ -36,7 +36,7 @@ flowchart TB
     Argo --> Apps
 ```
 
-#### Responsibilities
+### Responsibilities
 
 | Component | Responsibility |
 |---|---|
