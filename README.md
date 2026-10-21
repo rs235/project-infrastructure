@@ -39,7 +39,7 @@ flowchart TB
 #### Responsibilities
 
 | Component | Responsibility |
-|||
+|---|---|
 | Terraform | Provisions infrastructure such as Proxmox VMs and LXCs, AWS instances, VPCs and security groups. |
 | HCP Terraform | Stores Terraform state remotely. Terraform state is separated between main parts of infrastructure to minimize "blast radius" of potential mistakes. |
 | Ansible | Bootstraps Linux hosts and deploys applications and services with their configuration. |
