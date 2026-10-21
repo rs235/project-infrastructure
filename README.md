@@ -1,6 +1,6 @@
 # Infrastructure as Code
 
-Personal hybrid infrastructure automation built with Terraform and Ansible on top of Proxmox VE and AWS. Full CI/CD pipeline built with GitHub Actions provides change control and validation. Kubernetes application delivery is handled in a separate Argo CD [repository](https://github.com/rs235/project-argocd).
+Personal hybrid infrastructure automation built with Terraform and Ansible on top of Proxmox VE and AWS. Full CI/CD pipeline built with GitHub Actions provides change control and validation. Kubernetes application delivery is handled in a separate [Argo CD repository](https://github.com/rs235/project-argocd).
 
 This project focuses on providing reproducible infrastructure, reusable configuration and clear separation between infrastructure provisioning, system configuration and application delivery. It manages resources running on top of already existing home environment with Proxmox VE, TrueNAS, OPNsense, self hosted GitHub Actions runner and physical network devices which lie outside of the scope of this project.
 
@@ -148,9 +148,9 @@ The architecture intentionally avoids adding separate tools where the existing s
 
 ## Related repositories
 
-[Argo CD](https://github.com/rs235/project-argocd)
+[Argo CD repository](https://github.com/rs235/project-argocd)
 
-[Website](https://github.com/rs235/project-website)
+[Website repository](https://github.com/rs235/project-website)
 
 ## Future improvements
 
