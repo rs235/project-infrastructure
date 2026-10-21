@@ -154,4 +154,4 @@ The architecture intentionally avoids adding separate tools where the existing s
 
 ## Future improvements
 
-- Proxmox VE firewall configuration managed with Terraform.
+- Manage Proxmox VE firewall configuration with Terraform.
