@@ -154,4 +154,5 @@ The architecture intentionally avoids adding separate tools where the existing s
 
 ## Future improvements
 
+- Switch from Kubespray to Talos for K8s cluster deployment.
 - Manage Proxmox VE firewall configuration with Terraform.
