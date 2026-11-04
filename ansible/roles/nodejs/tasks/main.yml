@@ -7,6 +7,8 @@
       - gnupg
     state: present
     update_cache: true
+    cache_valid_time: 604800
+    lock_timeout: 600
 
 - name: Add NodeSource GPG key
   ansible.builtin.get_url:
@@ -25,6 +27,8 @@
     name: nodejs
     state: present
     update_cache: true
+    cache_valid_time: 604800
+    lock_timeout: 600
 
 - name: Verify Node.js installation
   ansible.builtin.command:

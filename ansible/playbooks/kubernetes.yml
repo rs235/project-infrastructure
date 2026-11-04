@@ -18,7 +18,7 @@
           - util-linux
         state: present
         update_cache: true
-        cache_valid_time: 3600
+        cache_valid_time: 604800
         lock_timeout: 600
 
     - name: Enable iscsid service

@@ -6,6 +6,8 @@
       - unzip
       - htop
     state: present
+    cache_valid_time: 604800
+    lock_timeout: 600
 
 - name: Set timezone
   become: true

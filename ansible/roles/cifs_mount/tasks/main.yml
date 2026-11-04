@@ -4,7 +4,8 @@
     name: cifs-utils
     state: present
     update_cache: true
-    cache_valid_time: 3600
+    cache_valid_time: 604800
+    lock_timeout: 600
 
 - name: Ensure /etc/samba directory exists
   ansible.builtin.file:
