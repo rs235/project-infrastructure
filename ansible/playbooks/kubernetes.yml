@@ -6,8 +6,36 @@
     - common
     - linux_users
 
+- name: Prepare worker nodes for Longhorn installation
+  hosts: kube_node
+  become: true
+  tasks:
+    - name: Install Longhorn dependencies
+      ansible.builtin.apt:
+        name:
+          - open-iscsi
+          - nfs-common
+          - util-linux
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Enable iscsid service
+      ansible.builtin.systemd_service:
+        state: started
+        enabled: true
+        name: iscsid
+      
+    - name: Create Longhorn storage dir
+      ansible.builtin.file:
+        path: /var/lib/longhorn
+        state: directory
+        owner: root
+        group: root
+        mode: "0700"
+
 # Deploy Kubernetes cluster with Kubespray
-- import_playbook: ../../dependencies/kubespray/playbooks/cluster.yml
+# - import_playbook: ../../dependencies/kubespray/playbooks/cluster.yml
 
 - name: Configure kubectl
   hosts: kube_control_plane
