@@ -1,10 +1,8 @@
 ---
-name: Home - Ansible Apply - Kubernetes
+name: Home - Ansible Check - kubernetes
 
 on:
-  push:
-    branches:
-        - main
+  pull_request:
     paths:
       - "ansible/inventories/home/**"
       - "ansible/playbooks/kubernetes.yml"
@@ -16,10 +14,11 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
-  kubernetes-ansible-apply:
-    uses: ./.github/workflows/reusable-ansible-apply.yml
+  ansible-check-kubernetes:
+    uses: ./.github/workflows/reusable-ansible-check.yml
     with:
       working-directory: ansible
       concurrency-group: home-kubernetes
