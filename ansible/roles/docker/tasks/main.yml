@@ -12,6 +12,7 @@
     autoremove: true
     purge: true
     state: absent
+    lock_timeout: 600
 
 - name: Install prerequisites for installation of Docker's apt repository
   ansible.builtin.apt:
@@ -20,6 +21,8 @@
       - curl
     update_cache: true
     state: present
+    cache_valid_time: 604800
+    lock_timeout: 600
 
 - name: Create keyrings directory
   ansible.builtin.file:
@@ -60,8 +63,9 @@
       - docker-buildx-plugin
       - docker-compose-plugin
     update_cache: true
-    # cache_valid_time: 3600
     state: present
+    cache_valid_time: 604800
+    lock_timeout: 600
 
 - name: Enable and start Docker service
   ansible.builtin.systemd_service:

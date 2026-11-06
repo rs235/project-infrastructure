@@ -18,11 +18,11 @@ module "k8s-cp1" {
 
   # CPU
 
-  cores = 3
+  cores = 2
 
   # Memory
 
-  memory = 4096
+  memory = 3072
 
   # Disks
 
@@ -68,7 +68,7 @@ module "k8s-cp2" {
 
   # Memory
 
-  memory = 4096
+  memory = 3072
 
   # Disks
 
@@ -114,7 +114,7 @@ module "k8s-cp3" {
 
   # Memory
 
-  memory = 4096
+  memory = 3072
 
   # Disks
 
@@ -166,7 +166,7 @@ module "k8s-w1" {
 
   storage = module.common.proxmox.storage
 
-  disk_size = 32
+  disk_size = 64
 
   # Network
 
@@ -212,7 +212,7 @@ module "k8s-w2" {
 
   storage = module.common.proxmox.storage
 
-  disk_size = 32
+  disk_size = 64
 
   # Network
 
@@ -258,7 +258,7 @@ module "k8s-w3" {
 
   storage = module.common.proxmox.storage
 
-  disk_size = 32
+  disk_size = 64
 
   # Network
 
