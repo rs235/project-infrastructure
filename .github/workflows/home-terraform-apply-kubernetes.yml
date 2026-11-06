@@ -2,12 +2,12 @@
 name: Home - Terraform Apply - kubernetes
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "terraform/environments/home/kubernetes/**"
-      - "terraform/modules/proxmox/**"
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - "terraform/environments/home/kubernetes/**"
+  #     - "terraform/modules/proxmox/**"
 
   workflow_dispatch:
 
