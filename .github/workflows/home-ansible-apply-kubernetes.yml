@@ -2,15 +2,15 @@
 name: Home - Ansible Apply - kubernetes
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "ansible/inventories/home/**"
-      - "ansible/playbooks/kubernetes.yml"
-      - "ansible/roles/**"
-      - "ansible/requirements.yml"
-      - "ansible/ansible.cfg"
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - "ansible/inventories/home/**"
+  #     - "ansible/playbooks/kubernetes.yml"
+  #     - "ansible/roles/**"
+  #     - "ansible/requirements.yml"
+  #     - "ansible/ansible.cfg"
 
   workflow_dispatch:
 
