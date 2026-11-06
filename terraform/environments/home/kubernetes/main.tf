@@ -18,11 +18,11 @@ module "k8s-cp1" {
 
   # CPU
 
-  cores = 3
+  cores = 2
 
   # Memory
 
-  memory = 4096
+  memory = 3072
 
   # Disks
 
@@ -68,7 +68,7 @@ module "k8s-cp2" {
 
   # Memory
 
-  memory = 4096
+  memory = 3072
 
   # Disks
 
@@ -114,7 +114,7 @@ module "k8s-cp3" {
 
   # Memory
 
-  memory = 4096
+  memory = 3072
 
   # Disks
 
