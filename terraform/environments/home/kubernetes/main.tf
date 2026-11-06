@@ -166,7 +166,7 @@ module "k8s-w1" {
 
   storage = module.common.proxmox.storage
 
-  disk_size = 32
+  disk_size = 64
 
   # Network
 
@@ -212,7 +212,7 @@ module "k8s-w2" {
 
   storage = module.common.proxmox.storage
 
-  disk_size = 32
+  disk_size = 64
 
   # Network
 
@@ -258,7 +258,7 @@ module "k8s-w3" {
 
   storage = module.common.proxmox.storage
 
-  disk_size = 32
+  disk_size = 64
 
   # Network
 
