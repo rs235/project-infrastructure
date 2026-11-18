@@ -1,0 +1,30 @@
+---
+- name: Checkout git repository
+  ansible.builtin.git:
+    repo: "{{ git_repository }}"
+    dest: "{{ git_checkout_path }}"
+    version: "{{ git_repository_branch }}"
+    update: true
+
+- name: Deploy .env file
+  ansible.builtin.copy:
+    src: .env
+    dest: "{{ git_checkout_path }}/.env"
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: Deploy with Docker Compose
+  community.docker.docker_compose_v2:
+    project_src: "{{ git_checkout_path }}"
+    project_name: "{{ docker_compose_project }}"
+    state: present
+    pull: "{{ docker_compose_pull }}"
+
+# - name: Remove unused Docker resources
+#   community.docker.docker_prune:
+#     containers: true
+#     networks: true
+#     images: true
+#     images_filters:
+#       dangling: false
