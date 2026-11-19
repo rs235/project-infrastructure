@@ -3,3 +3,4 @@ git_repository: ""
 git_checkout_path: "/opt/app"
 git_repository_branch: "main"
 docker_compose_pull: always
+docker_compose_build: always

@@ -16,4 +16,5 @@ git_repository: "https://github.com/rs235/project-website"
 git_checkout_path: "/home/ansible/website"
 git_repository_branch: "main"
 docker_compose_pull: always
+docker_compose_build: always
 docker_compose_project: "photo-portfolio-website"
