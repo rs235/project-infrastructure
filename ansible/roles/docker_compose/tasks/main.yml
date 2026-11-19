@@ -12,7 +12,7 @@
     dest: "{{ git_checkout_path }}/.env"
     owner: root
     group: root
-    mode: '0600'
+    mode: '0644'
 
 - name: Deploy with Docker Compose
   community.docker.docker_compose_v2:
@@ -20,6 +20,7 @@
     project_name: "{{ docker_compose_project }}"
     state: present
     pull: "{{ docker_compose_pull }}"
+    build: "{{ docker_compose_build }}"
 
 # - name: Remove unused Docker resources
 #   community.docker.docker_prune:
