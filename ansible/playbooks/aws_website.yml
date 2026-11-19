@@ -3,7 +3,6 @@
   hosts: project_website
   become: true
   roles:
-    # - linux_users
     - docker
 
 - name: Deploy Caddy
@@ -12,8 +11,8 @@
   roles:
     - caddy
 
-- name: Deploy website in Docker
+- name: Deploy website with Docker Compose
   hosts: project_website
   become: true
   roles:
-    - docker_container
+    - docker_compose
